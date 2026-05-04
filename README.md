@@ -43,7 +43,7 @@ conn = sqlite3.connect("pets.db")
 cursor = conn.cursor()
 conn.close()
 
-### 2. Data Manipulation
+2. Data Manipulation
 
 Operasi yang dilakukan:
 - SELECT → menampilkan data
@@ -52,17 +52,17 @@ Operasi yang dilakukan:
 - UPDATE → mengubah data
 - DELETE → menghapus data
 
-### 💡 Key Insights
+💡 Key Insights
 - SQLite cocok untuk project skala kecil hingga menengah
 - SQL + Python sangat efektif untuk data wrangling
 - Relasi database meningkatkan integritas data
 - DataFrame mempermudah analisis lanjutan
 
-### 👤 Author
+👤 Author
 Nadia Siti Ramadhani
 S1 Sains Data – UPN “Veteran” Jawa Timur
 
-### ⭐ Notes
+⭐ Notes
 Project ini dibuat untuk pembelajaran dan penguatan konsep:
 - Database
 - SQL Query
