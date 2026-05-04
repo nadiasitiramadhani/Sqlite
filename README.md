@@ -33,7 +33,7 @@ Project ini mencakup:
 
 ## ⚙️ Workflow
 
-### 1. Database Initialization
+1. Database Initialization
 Membuat dan menghubungkan database SQLite menggunakan Python:
 
 ```python
