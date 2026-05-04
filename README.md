@@ -1,120 +1,70 @@
-🐾 Projek with SQLite & Python
+# 🐾 Data Wrangling with SQLite & Python
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
+![Pandas](https://img.shields.io/badge/Data-Pandas-yellow)
 
 
-📌 Overview
+## 📌 Overview
+Project ini merupakan implementasi **data wrangling menggunakan SQLite dan Python**, mulai dari pembuatan database, manipulasi data menggunakan SQL, hingga transformasi data menjadi **DataFrame** untuk analisis.
 
-Project ini merupakan implementasi data wrangling menggunakan SQLite dan Python, mulai dari pembuatan database, manipulasi data menggunakan SQL, hingga transformasi data menjadi DataFrame untuk analisis.
-
-Fokus utama:
-   - Database management (SQLite)
-   - SQL Query (DDL & DML)
-   - Relasi antar tabel
-   - Integrasi Python dengan database
-   - Data transformation ke Pandas
-🎯 Objectives
-    - Memahami cara kerja database SQLite
-    - Mengimplementasikan operasi CRUD
-    - Menggunakan query lanjutan (JOIN, GROUP BY)
-    - Mengolah data menjadi format analisis (DataFrame)
-🧰 Tech Stack
-    - Python
-    - SQLite (sqlite3)
-    - Pandas
-    - DB Browser for SQLite
-⚙️ Workflow
-1. Database Initialization
-    - Membuat database pets.db
-    - Menghubungkan Python ke SQLite
-      
-2. Table Creation
-    CREATE TABLE Pet (
-        PetID INTEGER,
-        PetName VARCHAR(25),
-        OwnerName VARCHAR(100)
-    );
-
-3. Data Insertion
-    INSERT INTO Pet VALUES (1, 'Felix', 'Alex');
-    INSERT INTO Pet VALUES (2, 'Auburn', 'Britt');
-
-4. Data Manipulation
-    SELECT (menampilkan data)
-    ORDER BY (sorting ascending & descending)
-    ALTER TABLE (menambah kolom)
-    UPDATE (mengubah data)
-    DELETE (menghapus data)
-   
-6. Advanced Query
-    GROUP BY
-    SELECT COUNT(*), Gender FROM Pet GROUP BY Gender;
-    JOIN
-    SELECT PetName, OwnerName, TreatResult
-    FROM Pet
-    JOIN PetTreatment USING (PetID);
-
-🧩 Database Schema
-Table: Pet
-   - Column Type
-   - PetID Integer
-   - PetName Varchar
-   - OwnerName Varchar
-   - Age Integer
-   - Gender	Varchar(1)
-Table: PetTreatment
-   - Column	Type
-   - PetID	Integer
-   - TreatDate	Date
-   - TreatResult Varchar
-    
-📊 Sample Output
-    Data Setelah Update
-    (1, 'Felix', 'Alex', 3, 'M')
-    (2, 'Auburn', 'Britt', 2, 'F')
-
-GROUP BY Result
-    (2, 'M')
-    (2, 'F')
-
-🔄 Data Transformation (SQLite → Pandas)
-
-import pandas as pd
-    df = pd.DataFrame(data, columns=[
-        "PetID", "PetName", "OwnerName",
-        "Age", "Gender", "TreatDate", "TreatResult"
-    ])
+Project ini mencakup:
+- Pembuatan database SQLite
+- Operasi CRUD (Create, Read, Update, Delete)
+- Query lanjutan (JOIN, GROUP BY)
+- Relasi antar tabel
+- Integrasi Python dengan database
+- Transformasi data ke Pandas DataFrame
 
 
-📌 Output:
-    - Data siap untuk analisis lanjutan
-    - Bisa digunakan untuk visualisasi / machine learning
-  
-🚀 How to Run
-Install dependency:
-pip install pandas
+## 🎯 Objectives
+- Memahami penggunaan SQLite dalam Python
+- Mengimplementasikan query SQL dasar dan lanjutan
+- Membangun relasi antar tabel
+- Mengolah data menjadi format siap analisis
 
-Jalankan script Python / Jupyter Notebook
-Pastikan file database tersedia:
-pets.db
 
-📁 Project Structure
-├── pets.db
-├── source code.ipynb
-├── penjelasan tiap langkah.pdf
-└── README.md
+## 🧰 Tech Stack
+- Python
+- SQLite (`sqlite3`)
+- Pandas
+- DB Browser for SQLite
 
-💡 Key Insights
-    - SQLite cocok untuk project skala kecil–menengah
-    - SQL + Python = powerful untuk data wrangling
-    - Relasi database meningkatkan integritas data
-    - DataFrame mempermudah analisis lanjutan
-  
-👤 Author
+
+## ⚙️ Workflow
+
+### 1. Database Initialization
+Membuat dan menghubungkan database SQLite menggunakan Python:
+
+```python
+import sqlite3
+
+conn = sqlite3.connect("pets.db")
+cursor = conn.cursor()
+conn.close()
+
+### 2. Data Manipulation
+
+Operasi yang dilakukan:
+- SELECT → menampilkan data
+- ORDER BY → sorting data
+- ALTER TABLE → menambah kolom
+- UPDATE → mengubah data
+- DELETE → menghapus data
+
+### 💡 Key Insights
+- SQLite cocok untuk project skala kecil hingga menengah
+- SQL + Python sangat efektif untuk data wrangling
+- Relasi database meningkatkan integritas data
+- DataFrame mempermudah analisis lanjutan
+
+### 👤 Author
 Nadia Siti Ramadhani
 S1 Sains Data – UPN “Veteran” Jawa Timur
 
-⭐ Notes
+### ⭐ Notes
 Project ini dibuat untuk pembelajaran dan penguatan konsep:
-    - Database
-    - SQL Query
-    - Data Wrangling
-    - Data Analysis Preparation
+- Database
+- SQL Query
+- Data Wrangling
+- Data Analysis Preparation
